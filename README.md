@@ -1,6 +1,9 @@
 # Chinook SQL Business Analysis
 
-## 1. Project Objective
+## 1. Project Overview
+SQL analysis of the Chinook database to identify revenue drivers, customer behaviour, and product performance.
+
+### Project Objective
 This project analyses sales and customer data from a digital music store (Chinook database) to understand:
 
 - Which countries and customers generate the most revenue
@@ -49,7 +52,7 @@ Revenue is highest in the USA, which generates significantly more than any other
 
 There is a noticeable drop after the top few countries, suggesting that most revenue comes from a small number of key markets. 
 
-This could indicate strong performance in those regions, but also shows that revenue is not widely spread across all countries.
+This indicates strong performance in those regions, but also shows that revenue is not widely spread across all countries.
 
 ---
 ### 2.2. Revenue by Customer
@@ -82,7 +85,7 @@ High-value customers are distributed across multiple countries rather than being
 This suggests that customer value is not limited to the largest markets, and that high-spending individuals exist across a wide range of regions.
 
 ---
-### 2.3. Customer count and average revenue by Country 
+### 2.3. Customer Count and Average Revenue by Country
 How big is the customer base in each country and what is the average revenue generated per customer in each country?
 
 #### SQL Query
@@ -136,14 +139,14 @@ SELECT
 	g.name AS genre,
 	SUM(il.UnitPrice * il.Quantity) AS total_revenue,
 	SUM(il.Quantity) AS total_sales,
-	AVG(IL.UnitPrice ) AS avg_price
+	AVG(il.UnitPrice) AS avg_price
 FROM InvoiceLine AS il 
 LEFT JOIN Track AS t
 	ON il.TrackId = t.TrackId
 LEFT JOIN Genre AS g 
 	ON t.GenreId = g.GenreId
 GROUP BY g.Name
-ORDER BY total_revenue_by_genre DESC;
+ORDER BY total_revenue DESC;
 ```
 | genre              | total_revenue | total_sales | avg_price |
 |--------------------|--------------|-------------|-----------|
@@ -235,7 +238,7 @@ FROM Customer AS c
 LEFT JOIN Invoice AS i
     ON c.CustomerId = i.CustomerId
 GROUP BY c.CustomerId
-ORDER BY total_revenue DESC;
+ORDER BY total_spent DESC;
 ```
 | customer_name         | order_count | total_spent | avg_order_value |
 |----------------------|------------|-------------|-----------------|
