@@ -260,11 +260,29 @@ This suggests that, within a fixed customer base, increasing average order value
 ## 3. Key Findings
 
 - Revenue is heavily concentrated in a small number of countries, with the USA leading by a significant margin.
-- Customer value is consistent across countries, meaning revenue differences are primarily driven by customer base size rather than individual spending.
+- Average customer spend is consistent across countries, meaning differences in country-level revenue are driven by the number of customers rather than individual spending.
 - High-value customers are distributed globally, not just in the largest markets.
 - Rock is the dominant genre across all markets, with strong and consistent performance internationally.
 - Revenue across genres is driven more by sales volume than pricing, as most tracks have a standard price.
-- Customer revenue differences are driven by average order value rather than purchase frequency.
+- At the individual level, differences in customer revenue are driven by average order value rather than purchase frequency.
+
+## 4. Business Recommendations
+
+- Focus on expanding the customer base in smaller markets, as this is the main driver of overall revenue and customer spending behaviour is consistent across regions.
+- In high-performing markets such as the USA and Canada, implement strategies to increase average order value (e.g. bundles or recommendations), rather than focusing solely on increasing purchase frequency.
+- Increase the number of tracks available in high-performing genres such as Rock and Latin to drive higher sales volume.
+
+## 5. Limitations
+
+- The dataset is relatively small and may not fully reflect real-world customer behaviour.
+- Unit pricing is mainly fixed, limiting deeper analysis of price sensitivity.
+- Customer behaviour is consistent across the dataset, which may have simplified some conclusions.
+
+## 6. Next Steps
+
+- Build visual dashboards (Tableau / Power BI) to present findings more interactively.
+- Analyse customer retention and repeat purchase behaviour over time.
+- Explore segmentation by customer demographics or purchase history.
 
 
 
